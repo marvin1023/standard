@@ -9,7 +9,7 @@
 5. 请不要在内联元素中嵌入块级元素，如span里面有div标签，a里面包裹h2等
 6. 标签挂靠的class不要过多，最多别超过4个
 7. 数据内容，大胆的使用table
-8. a元素提供title属性，img提供alt属性，如果img大小固定，请记得使用width和height属性（如<img src="" alt="" width="200" 1. height="100">），如果做的是响应式就不用加width和height了
+8. a元素提供title属性，img提供alt属性，如果img大小固定，请记得使用width和height属性（如`<img src="" alt="" width="200" 1. height="100">`），如果做的是响应式就不用加width和height了
 9. 页面中不要使用&nbsp进行缩进，如需缩进，使用CSS的text-indent来控制，如text-indent:2em用于中文的缩进两个空格
 10. 代码缩进使用tab键（四个空格）
 12. 对于一个语义化的内部标签，应尽量避免使用className。比如在这样一个列表中，li标签中的itm应去除：`<ul class="m-help"><li class="itm"></li><li class="itm"></li></ul>`

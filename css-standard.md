@@ -113,6 +113,7 @@
 
 最后请不要过度使用sprite背景图片，而是按照或页面，或模块，或元件的方式合并为雪碧图，更好的考虑到未来的修改或扩展。
 
+
 ##参考资料：
 
 * [NEC HTML规范](http://nec.netease.com/standard/html-structure.html)

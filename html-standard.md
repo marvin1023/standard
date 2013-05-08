@@ -79,7 +79,8 @@
 	
 	.visuallyhidden{
 		position: absolute;
-    	clip:rect(1px 1px 1px 1px);
+    	clip:rect(1px 1px 1px 1px);/* ie6,7 */
+    	clip:rect(1px, 1px, 1px, 1px);
 	}
 
 ###边栏区块

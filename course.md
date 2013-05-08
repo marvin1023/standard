@@ -1,5 +1,12 @@
 #html&css终极教程
 
+在css人群中，有一群人如果只是肤浅的聊下，他们什么都知道，但是如果是严肃的正规的面试，他们对这个没把握对那个表示纳闷，到底是考得太简单了，还是记错了？如果在此时面试官再略加一点怀疑的表情或追问的精神，他们就会全线崩溃。但是别忘了他们照样可以把效果图给切出来，切得和效果图还很吻合，也许速度还比较快，这也许就是css的低门槛。
+
+##CSS选择器的优化 
+为了表示对这个的权重，我特意放在了第一个位置，借此也希望大家能写出更好的html&css代码。
+
+* [CSS选择器的优化](http://www.w3cplus.com/css/css-selector-performance)
+
 ##重置
 说起html&css，不得不说的是重置，之所以需要重置，是因为各个浏览器对于常用的标签元素可能带有一些基础的样式，而这些基础样式你不需要，所以就出现了重置。一般来说重置分为两种类型的重置，一种是归零式的，一种是修复式的。归零式的就是打倒再重建，比较有名的就是最简单的`*{margin:0;padding:0;}`和Eric [reset css](http://meyerweb.com/eric/tools/css/reset/)的；而修复式的目标则在比较各个浏览器样式的异同，对解析不太良好或和其他多数浏览器不一样的进行修复，以使各个浏览器表现一致，比较出名的就是[normalize](http://necolas.github.io/normalize.css/)。目前来说normalize的占有率越来越大，它主要分为两个版本，一个是包括ie6的，一个是从ie8开始，抛弃了ie6/7。
 
@@ -39,14 +46,13 @@
 * [flexbox ](http://www.w3cplus.com/blog/tags/157.html)
 * [Giving Content Priority with CSS3 Grid Layout](http://24ways.org/2012/css3-grid-layout/)
 
-##z-index层级
-这个问题之所以被提到这里，还是因为ie6/7，如果你直接从ie8+开始做兼容那就飘过吧。说到底ie6/7的z-index是基于它的父元素来的，关于这个新手碰到最典型的问题就是二级菜单被下面的滚动图片给遮挡住了，而另一个就是select的层级问题。而抛出z-index可以改变层级外，其实opacity也可以改变层级，详见第二个链接。
+##通过改变class来改变显示
+上面的[固定宽度布局解决方案](http://www.w3cplus.com/solution/layout/layout.html)就运用了这种思路，不同的class,#main的宽度不同。用class来控制布局或显示是一种优秀的思想，可能我们更常见的就是jquery中的toggleClass了，这里我们一般用的还是属于初级的，如果思维再扩散点，你就会发现它可以应用的场景越多。
 
-* [CSS教程：彻底掌握Z-index属性](http://www.cnblogs.com/gisdream/archive/2010/06/10/1755891.html)
-* [What No One Told You About Z-Index](http://philipwalton.com/articles/what-no-one-told-you-about-z-index/)
+* [Adaptable view – how do they do it?](http://www.jankoatwarpspeed.com/adaptable-view-how-do-they-do-it/)
 
 ##清除浮动
-目前我们所说的清除浮动，大多数说的实际是清除子元素的浮动，所以严格来说应该是闭合浮动。在这里我们把两者分开，清除浮动指清除上级元素的浮动，对应的使用技术是clear:both/left/right/none。而闭合子元素的浮动技术就比较多了，目前比较流行的是clearfix和overflow技术，另外还有inline-block技术和添加空标签技术。
+目前我们所说的清除浮动，大多数说的实际是清除子元素的浮动，所以严格来说应该是闭合浮动。在这里我们把两者分开，清除浮动指清除上级元素的浮动，对应的使用技术是clear:both/left/right/none。而闭合子元素的浮动技术就比较多了，目前比较流行的是clearfix和overflow技术，另外还有inline-block技术和添加空标签技术等。
 
 * [那些年我们一起清除过的浮动](http://www.iyunlu.com/view/css-xhtml/55.html)
 * [闭合浮动解决方案](http://www.w3cplus.com/solution/clearfloat/clearfloat.html)
@@ -81,6 +87,13 @@
 * [图文混排解决方案](http://www.w3cplus.com/solution/imagetextmix/imagetextmix.html)
 * [CSS制作Facebook的媒体对象](http://www.w3cplus.com/css/facebook-status-message-design-with-css)
 
+##ul/ol美化
+关于ul/ol的重要性不言而喻，看看各大网站的源码就知道了。它最常见的地方就是导航，信息列表了。鉴于各个浏览器默认样式或margin或padding，我们一般在重置的时候都是重置为0；然后对于标题类的信息列表我们一般会加个小的icon作为背景以修饰，而作为非主导航的情况下可能还会加上不同icon标识，以有一个加强可辨别认识，也使网站增色不少；至于一些项目列表什么的又属于另一方面的更复杂点的应用了。
+
+* [8 different ways to beautifully style your lists](http://www.marcofolio.net/css/8_different_ways_to_beautifully_style_your_lists.html)
+* [纯css3有序列表](http://www.w3cplus.com/demo/387.html)
+
+
 ##水平垂直居中
 关于这个问题我只说一点，你就知道它是多么的闹心了：它经常出现在各大前端招聘的试题上啊。首先说下水平居中，这个比较好办，目前常用的有`text-align:center;`,`margin-left:auto;margin-right:auto;`还有相对/绝对元素的`left:50%;margin-left:-width`，除了text-align没有宽度限制，其余的对不起，都需要明确自己的宽度。再说下垂直居中，这个分为单行文字和其他，单行文字设置line-height等于父元素的height就垂直居中了，当然对于知道自己高度的还是比较好搞定的，用相对/绝对元素的`top:50%;margin-top:-height`，对于未知高度的那就比较复杂了。所有这些归到最后就是知道自己宽度高度的水平垂直居中都是纸老虎，真正要考的一般就是最变态的未知宽高的水平垂直居中啊。这要是css3没有出现，那这些未知宽度可得纠结死了，而现在[flex](http://www.w3cplus.com/blog/666.html)这个为布局而生的属性，一句margin:auto就可以轻松解决了；当然[tranform](http://www.w3cplus.com/content/css3-transform)中的translate的50%也是很好用的，它的50%是自己的一半，而left，top之类的50%是它的父元素的一半。
 
@@ -89,21 +102,11 @@
 * [关于元素水平居中](http://www.aiubug.com/?p=427)
 * [flex](http://www.w3cplus.com/blog/666.html)
 
-##图片美化及优化
-###图片美化
-图片美化包括添加边框，圆角([border-radius](http://www.w3cplus.com/node/48))，阴影([box-shadow](http://www.w3cplus.com/content/css3-box-shadow))，滤镜效果等。这里说下对于ie6-8不支持图片的圆角怎么去搞，主要的思路就是制作一个中间透明，四角为纯色的图片，然后遮盖在图片上，透明的部分就会显示出我们的图片。
+##tabs选项卡设计
+我们这里把选项卡大体分为两类，一种是有border-bottom的，我们称为线条边框类型，一种是纯颜色色块类的，我们称为颜色块类型。一般来说线条边框的比颜色块的要复杂点，因为要考虑到下面的那个border-bottom。然后当为线条框架的时候，有些tabs是紧凑的，并且所有的tabs标题宽度加起来刚好与下面的内容的宽度一致，那么这个时候的border-bottom还是很简单的，直接就是tabs标题的border-bottom就可以了，但是当总的标题宽度小于下面内容的宽度，又或者标题之间有间隔，那么这个时候的border-bottom要处理就得用点手段了
 
-* [CSS3 Filter的十种特效](http://www.w3cplus.com/css3/ten-effects-with-css3-filter)
-* [AlloyImage 步入web图像处理时代](http://alloyteam.github.io/AlloyPhoto/)
-
-###图片优化
-图片的优化包括裁减，压缩，合并等。裁减可以使用css的clip来搞，压缩那当然得使用工具了，至于合并那就得考虑sprite了，当然合并应该有原则，这样在后期维护的时候才不会使人疯狂。
-
-* [hhhhold-在线图片，可定义大小](http://hhhhold.com/)
-* 在线图片压缩：[jpegmini](http://jpegmini.com/)，[tinyPNG](http://tinypng.org/)，[Smush.it](http://www.smushit.com/ysmush.it/)
-* [Encode Data URL](http://www.pjhome.net/web/html5/encodeDataUrl.htm)
-* [CSS Sprites: CSS图片合并技术详解 - 中文版](http://paranimage.com/css-sprites-guidelines/)，[The Mystery Of CSS Sprites: Techniques, Tools And Tutorials - 英文版	](http://coding.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/)
-
+* [css tab标题解决方案](http://www.w3cplus.com/solution/tabs/tabs.html)
+* [选项卡标题设计](http://www.w3cplus.com/framework/tabs/index.php)
 
 ##透明度使用
 透明度分为opacity和rgba/,他们的区别在于：Opacity的透明属于全层透明，子元素中无法覆写；而Rgba透明用于color或background-color的透明，不影响到子元素
@@ -116,11 +119,48 @@
 
 * [如何用CSS实现大背景样式](http://www.w3cplus.com/css/how-to-css-large-background)
 
+##整块可点击设计
+本来这个不是什么问题，把所有的标签放在a里面就可以点击了。但是正是因为如此，a里面嵌套了p，div等块级元素而变得不合理。所以如果是简单的文字信息，可以a里面嵌套strong,span等，如果是复杂点的，请不要把所有的元素用a包裹起来，而是使用js代码来变相解决这个问题:当整个区块点击时，找到里面a元素的href值，然后设置window.location等于这个href值。
+
+* [Web设计师值得收藏的10个jQuery特效(1)](http://developer.51cto.com/art/201011/235489.htm) 第6个
+
 ##border
 border能做什么，也许超乎了你的想象。
 
 * [border解决方案](http://www.w3cplus.com/solution/border/border.html)
 * [纯CSS制作的图形效果](http://www.w3cplus.com/css/create-shapes-with-css)
+
+##面包屑设计
+关于面包屑比较有意思的就是可以简单得不可思议，也可以复杂的让你吐血。其实这正是设计的魅力。至于简单的直接标签都不用加什么修饰的就不用说了，下面给了三个教程说下那些箭头设计的魅力。
+
+* [http://veerle-v2.duoh.com/blog/comments/simple_scalable_css_based_breadcrumbs](http://veerle-v2.duoh.com/blog/comments/simple_scalable_css_based_breadcrumbs)
+* [CSS制作面包屑 ](http://www.w3cplus.com/demo/css-create-breadcrumb.html)
+* [藤藤每日一练——CSS3 Animation Breadcrumbs ](http://www.w3cplus.com/demo/CSS3-Animation-Breadcrumbs.html)
+
+##星级评论设计
+简单来说星级评论包括三种，一种是用来展示点评结果的，你不能参与点评；第二种是用来点评的，你可以投票，且只有你自己的投票结果；最后一种就是前两者结合起来，既展示前人点评的结果，而你又能参与点评的。第一种的最好解决，直接两层元素就可以搞定，一层负责灰色的背景图，一层负责显示红色的结果，结果的宽度用百分比表示；第二种的就需要好几个标签了，一颗星一个元素，因为需要做鼠标滑过的效果，滑过第几颗星，它前面所有的元素也得改变状态，所以得js配合添加class；至于第三种就更复杂了，如果展示的时候加入了半颗星那就更复杂了，目前想到的是里面分为上面的两个部分，通过定位的方式默认显示的是点评结果，鼠标滑过显示可以点评的部分。
+这方面的教程搜索了半天就找了一个第二种的。
+
+* [星级评分系统](http://js.fgm.cc/learn/lesson4/09.html)
+
+##sticky footer
+之所以叫sticky footer而不叫fixed footer，是因为这个不是一般的用fixed来固定在视窗底部的，而是当页面不够一屏的时候，footer在视窗的底部，而当其超过一屏，那么就在页面的底部而不是视窗的底部。当然要做这个效果对于整体的html结构是有要求的，里面必须用到的技术就是min-height:100%;
+
+* [sticky footer](http://www.w3cplus.com/css/css-sticky-foot-at-bottom-of-the-page)
+
+##z-index层级
+这个问题之所以被提到这里，还是因为ie6/7，如果你直接从ie8+开始做兼容那就飘过吧。说到底ie6/7的z-index是基于它的父元素来的，关于这个新手碰到最典型的问题就是二级菜单被下面的滚动图片给遮挡住了，而另一个就是select的层级问题。而抛出z-index可以改变层级外，其实opacity也可以改变层级，详见第二个链接。
+
+* [CSS教程：彻底掌握Z-index属性](http://www.cnblogs.com/gisdream/archive/2010/06/10/1755891.html)
+* [What No One Told You About Z-Index](http://philipwalton.com/articles/what-no-one-told-you-about-z-index/)
+
+##form表单设计
+form表单一说起来一肚子苦水，不想说了。
+
+* [form解决方案](http://www.w3cplus.com/solution/form/form.html)，这是初版的，分析及设计思路说得还算明白，凑合着先看下，道理是一样的。下面两个是关于html5 form的知识
+* [IE10开发手册之form](http://msdn.microsoft.com/en-us/library/ie/hh673544%28v=vs.85%29.aspx)
+* [A Form of Madness](http://diveintohtml5.info/forms.html)
+
 
 ##文字
 先说下渐变文字，关键就在于使用蒙版遮罩，蒙版由半透明到纯透明，盖在文字的上面就是渐变文字了。在css3强大的今天图片的方法肯定是有历史的了，先进的谷歌浏览器就可以使用mask来搞定文字的渐变。
@@ -131,13 +171,35 @@ border能做什么，也许超乎了你的想象。
 * [CSS3 @font-face](http://www.w3cplus.com/content/css3-font-face)
 * [IcoMoon](http://icomoon.io/app/)
 
-##CSS选择器的优化 
-这个又是个不得不说的话题。总有一部分人他们不知道css选择器的权重，不知道这个不知道那个，但是他照样可以把效果图给切出来，这就是css的低门槛。
+##图片美化及优化
+###图片美化
+图片美化包括添加边框，圆角([border-radius](http://www.w3cplus.com/node/48))，阴影([box-shadow](http://www.w3cplus.com/content/css3-box-shadow))，滤镜效果等。这里说下对于ie6-8不支持图片的圆角怎么去搞，主要的思路就是制作一个中间透明，四角为纯色的图片，然后遮盖在图片上，透明的部分就会显示出我们的图片。
 
-* [CSS选择器的优化](http://www.w3cplus.com/css/css-selector-performance)
+* [CSS3 Filter的十种特效](http://www.w3cplus.com/css3/ten-effects-with-css3-filter)
+* [AlloyImage 步入web图像处理时代](http://alloyteam.github.io/AlloyPhoto/)
+
+###图片优化
+图片的优化包括裁减，压缩，合并等。裁减可以使用css的clip来搞，压缩那当然得使用工具了，至于合并那就得考虑sprite了，当然合并应该有原则，这样在后期维护的时候才不会使人疯狂。
+
+* [纯CSS制作缩略图片](http://www.w3cplus.com/css/pure-css-create-faux-image-cropping)
+* [hhhhold-在线图片，可定义大小](http://hhhhold.com/)
+* 在线图片压缩：[jpegmini](http://jpegmini.com/)，[tinyPNG](http://tinypng.org/)，[Smush.it](http://www.smushit.com/ysmush.it/)
+* [Encode Data URL](http://www.pjhome.net/web/html5/encodeDataUrl.htm)
+* [CSS Sprites: CSS图片合并技术详解 - 中文版](http://paranimage.com/css-sprites-guidelines/)，[The Mystery Of CSS Sprites: Techniques, Tools And Tutorials - 英文版	](http://coding.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/)
+
+##经验技巧
+所谓经验技巧都是些前人总结的一些小东西，他们把踩过的坑，弯过的路，曾经的不成熟代码纠正改过，以方便后人乘凉。里面实用的东西多多，稍微一句简单的代码，加以修饰，废话连篇起来就是一篇文章。
+
+* [11个让你代码整洁的原则](http://www.w3cplus.com/html/11-principles-for-keeping-your-code-clean)
+* [十个CSS小技巧](http://www.w3cplus.com/css/ten-css-tips)
+* [15个CSS技巧和窍门](http://www.w3cplus.com/css/15-css-tips-and-tricks)
+* [20个CSS实战技巧](http://www.w3cplus.com/css/20-css-code-snippets-to-make-you-a-better-coder)
+* [13个CSS技巧](http://www.w3cplus.com/css/13-premium-one-line-css-tips)
+* [7个不能遗忘的CSS样式](http://www.w3cplus.com/css/7-css-tips-from-html5-boilerplate-websites)
+* [20个实用的CSS技巧代码](http://www.w3cplus.com/css/20-incredibly-useful-CSS-snippets-for-developers)
 
 ##IE bug
-上面的那部分人虽然很多不知道，但是他知道怎么去打bug，于是乎ie6/7 bug满天飞，超乎想象，但是不服不信，人家切出来的图跟设计图是相当的符合，所以照样过关。在他们眼中没有标准，他们的方法是见招拆招。对此，这篇教程只想说，bug是有限的，而且如果你知道更多的话，有些还是可以绕过的。
+知道怎么去打ie的bug，也是一位合格的csser必备的。但是总有人把bug运用的“淋漓尽致”，于是乎ie6/7 bug满天飞，超乎想象，但是不服不信，人家切出来的图跟设计图是相当的符合，所以照样过关。在他们眼中没有标准，他们的方法是见招拆招。对此，这篇教程只想说，bug是有限的，而且如果你对技术了解更多的话，bug就越少，甚至于直接绕过部分bug。当然在修炼好自己的同时，我们也希望ie6/7加速退亡，那样我们会轻松很多。
 
 * [IE BUG相关文章集合](http://www.qianduan.net/ie-bug-resources.html)
 
@@ -145,3 +207,4 @@ border能做什么，也许超乎了你的想象。
 虽然浏览器越来越牛，bug越来越少，但是没办法，没有哪个浏览器是完美的，跟人一样，所以学会给各个浏览器打bug还是很有必要的。
 
 * [主流浏览器的Hack写法](http://www.w3cplus.com/css/browser-hacks.html)
+

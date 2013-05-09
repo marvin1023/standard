@@ -87,11 +87,12 @@
 * [图文混排解决方案](http://www.w3cplus.com/solution/imagetextmix/imagetextmix.html)
 * [CSS制作Facebook的媒体对象](http://www.w3cplus.com/css/facebook-status-message-design-with-css)
 
-##ul/ol美化
-关于ul/ol的重要性不言而喻，看看各大网站的源码就知道了。它最常见的地方就是导航，信息列表了。鉴于各个浏览器默认样式或margin或padding，我们一般在重置的时候都是重置为0；然后对于标题类的信息列表我们一般会加个小的icon作为背景以修饰，而作为非主导航的情况下可能还会加上不同icon标识，以有一个加强可辨别认识，也使网站增色不少；至于一些项目列表什么的又属于另一方面的更复杂点的应用了。
+##ul/ol
+关于ul/ol的重要性不言而喻，看看各大网站的源码就知道了。它最常见的地方就是导航，信息列表了。鉴于各个浏览器默认样式或margin或padding，我们一般在重置的时候都是重置为0；然后对于标题类的信息列表我们一般会加个小的icon作为背景以修饰，而作为非主导航的情况下可能还会加上不同icon标识，以有一个加强可辨别认识，也使网站增色不少；至于滚动图片那又是ul的一大经典应用；当然一些项目列表什么的就属于另一方面的更复杂点的应用了。
 
 * [8 different ways to beautifully style your lists](http://www.marcofolio.net/css/8_different_ways_to_beautifully_style_your_lists.html)
 * [纯css3有序列表](http://www.w3cplus.com/demo/387.html)
+* [滚动图片结构分析](http://www.w3cplus.com/framework/imgslide/index.php)
 
 
 ##水平垂直居中
@@ -208,3 +209,38 @@ form表单一说起来一肚子苦水，不想说了。
 
 * [主流浏览器的Hack写法](http://www.w3cplus.com/css/browser-hacks.html)
 
+##css3选择器
+
+* [基本选择器](http://www.w3cplus.com/css3/basic-selectors)
+* [属性选择器](http://www.w3cplus.com/css3/basic-selectors)
+* [伪类选择器 ](http://www.w3cplus.com/css3/pseudo-class-selector)
+
+##css3属性
+
+* [box-sizing](http://www.w3cplus.com/content/css3-box-sizing)
+* [border-radius](http://www.w3cplus.com/node/48)
+* [border-image](http://www.w3cplus.com/content/css3-border-image)
+* [border-color](http://www.w3cplus.com/content/css3-border-color)
+* [box-shadow](http://www.w3cplus.com/content/css3-box-shadow)
+* [text-shadow](http://www.w3cplus.com/node/52)
+* [text-overflow](http://www.w3cplus.com/content/css3-text-overflow)
+* [word-wrap](http://www.w3cplus.com/content/css3-word-wrap)
+* [@font-face](http://www.w3cplus.com/content/css3-font-face)
+* [rgba](http://www.w3cplus.com/node/45)
+* [gradient](http://www.w3cplus.com/content/css3-gradient)
+* [background-size](http://www.w3cplus.com/content/css3-background-size)
+* [background-clip](http://www.w3cplus.com/content/css3-background-clip)
+* [background-origin](http://www.w3cplus.com/content/css-background-origin)
+* [Multiple Backgrounds](http://www.w3cplus.com/content/css3-multiple-backgrounds)
+* [transform](http://www.w3cplus.com/content/css3-transform)
+* [transition](http://www.w3cplus.com/content/css3-transition)
+* [animation](http://www.w3cplus.com/content/css3-animation)
+* [calc](http://www.w3cplus.com/css3/how-to-use-css3-calc-function.html)
+* [appearance](http://www.w3cplus.com/css3/changing-appearance-of-element-with-css3.html)
+* [::selection](http://www.w3cplus.com/content/css-selection)
+* [rem](http://www.w3cplus.com/css3/define-font-size-with-css3-rem)
+* [filter](http://www.w3cplus.com/css3/ten-effects-with-css3-filter)
+* [@supports](http://www.w3cplus.com/css3/css3-supports.html)
+* [flex](http://www.w3cplus.com/blog/666.html)
+* [columns](http://www.w3cplus.com/node/72)
+* [grids](http://24ways.org/2012/css3-grid-layout/)

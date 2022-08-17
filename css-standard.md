@@ -1,5 +1,5 @@
-#CSS 部份
-##基础
+# CSS 部份
+## 基础
 * css文件开始添加编码:`@charset "utf-8";`
 * 选择器、属性和值都使用小写
 * css请使用多行模式编写，上线之前再压缩（sublime text提供压缩的插件YUI Compressor，如果是用sass，可以选择直接解析成压缩的css）
@@ -16,7 +16,7 @@
 * 当值为0时的省略单位
 * 样式表中中文字体名请使用转码后的unicode码，参阅：[css文件中的unicode参照](http://www.56.com/style/-doc-/v1/tpl/css_dev_spec/css_unicode.html)
 
-###选择器权重
+### 选择器权重
 1. !important
 2. 行内样式，指的是html文档中定义的style
 3. ID选择器
@@ -25,7 +25,7 @@
 
 更多请查阅：[css选择器权重](http://www.w3cplus.com/css/css-specificity-things-you-should-know.html)
 
-###注释
+### 注释
 块级注释，用于布局结构或模块
 	
 	/* -------------------------------------------------
@@ -47,20 +47,20 @@
 	    margin-right:10px;
 	}
 
-##各浏览器hack
+## 各浏览器hack
 请以标准浏览器为准书写css代码，如遇兼容问题，先考虑换实现方法，在万不得已的情况下，采用hack解决
 
-###firefox
+### firefox
 	
 	/* Firefox 3+ */
 	@-moz-document url-prefix() {}
 
-###chrome及safari
+### chrome及safari
 
 	/* Chrome, Safari 3+ */
 	@media screen and (-webkit-min-device-pixel-ratio:0) {}
 
-###ie
+### ie
 
 选择器写法
 	
@@ -84,8 +84,8 @@
 
 更多请查阅：[hack速查英文版](http://browserhacks.com/) / [hack速查中文版](http://www.w3cplus.com/css/browser-hacks.html)
 
-##图片优化
-###图片本身的优化：
+## 图片优化
+### 图片本身的优化：
 
 * 图像质量要求和图像文件大小决定你用什么格式的图片，用较小的图片文件呈现较好的图像质量。
 * 当图片色彩过于丰富且无透明要求时，建议采用jpg格式并保存为较高质量。
@@ -94,7 +94,7 @@
 * 当图片有动画时，只能使用gif格式。
 * 你可以使用工具对图片进行再次压缩，但前提是不会影响色彩和透明。这里推荐几个优秀的在线压缩工具：[Smush.it](www.smushit.com/ysmush.it/)，[JPEGmini](http://jpegmini.com/main/shrink_photo)，[tiny png](http://tinypng.org/)
 
-###图片合并（雪碧图）的使用：
+### 图片合并（雪碧图）的使用：
 
 多图合并注意事项
 
@@ -114,7 +114,7 @@
 最后请不要过度使用sprite背景图片，而是按照或页面，或模块，或元件的方式合并为雪碧图，更好的考虑到未来的修改或扩展。
 
 
-##参考资料：
+## 参考资料：
 
 * [NEC HTML规范](http://nec.netease.com/standard/html-structure.html)
 * [56 HTML规范](http://www.56.com/style/-doc-/v1/tpl/)
